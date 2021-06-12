@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Item from './Item'
 
-const List = ({ items }) => {
+const List = ({ items, removeItem, editItem }) => {
   return (
-    <section>
-      <h2>List todo</h2>
+    <section className='todo-list'>
       {items.map((item) => (
-        <Item data={item} />
+        <Item
+          data={item}
+          key={item.id}
+          removeItem={removeItem}
+          editItem={editItem}
+        />
       ))}
     </section>
   )

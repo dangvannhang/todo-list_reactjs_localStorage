@@ -1,18 +1,26 @@
 import React from 'react'
 import { FaTrash, FaEdit } from 'react-icons/fa'
 
-const Item = ({ data }) => {
+const Item = ({ data, removeItem, editItem }) => {
   return (
-    <article className='item'>
-      <h3>New item</h3>
-      <section className='btn-modify'>
-        <button>
+    <article className='todo-item'>
+      <span>{data.title}</span>
+      <span className='btn-modify'>
+        <button
+          onClick={() => {
+            editItem(data.id)
+          }}
+        >
           <FaEdit />
         </button>
-        <button>
+        <button
+          onClick={() => {
+            removeItem(data.id)
+          }}
+        >
           <FaTrash />
         </button>
-      </section>
+      </span>
     </article>
   )
 }

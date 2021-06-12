@@ -1,3 +1,6 @@
+# Documentation
+- https://www.codementor.io/@ekunolaeasybuoy/deploying-react-app-from-github-to-netlify-xob6bhhxu
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
